@@ -10,6 +10,7 @@ return {
     event = 'VeryLazy',
     config = cfg('tools.whichkey'),
   },
+
   {
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
@@ -20,6 +21,7 @@ return {
     build = ':TSUpdate',
     config = cfg('lang.treesitter'),
   },
+
   {
     'nvim-telescope/telescope.nvim',
     dependencies = {
@@ -33,6 +35,14 @@ return {
     cmd = 'Telescope',
     config = cfg('tools.telescope'),
   },
+
+  -- color
+  {
+    'rebelot/kanagawa.nvim',
+    lazy = false,
+    config = cfg('ui.kanagawa'),
+  },
+
   -- LSP
   {
     {
