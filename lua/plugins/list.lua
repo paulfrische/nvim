@@ -11,6 +11,16 @@ return {
     config = cfg('tools.whichkey'),
   },
   {
+    'nvim-treesitter/nvim-treesitter',
+    dependencies = {
+      { 'nvim-treesitter/nvim-treesitter-textobjects' },
+      { 'nvim-treesitter/nvim-treesitter-context' },
+    },
+    event = { 'BufNew', 'BufReadPre', 'InsertEnter' },
+    build = ':TSUpdate',
+    config = cfg('lang.treesitter'),
+  },
+  {
     'nvim-telescope/telescope.nvim',
     dependencies = {
       {
