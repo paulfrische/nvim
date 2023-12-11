@@ -38,3 +38,11 @@ vim.opt.signcolumn = 'yes'
 vim.opt.guicursor = ''
 
 vim.opt.confirm = true
+
+-- autoindent
+vim.keymap.set('n', 'i', function()
+  if #vim.fn.getline('.') == 0 then
+    return '"_cc'
+  end
+  return 'i'
+end, { expr = true })

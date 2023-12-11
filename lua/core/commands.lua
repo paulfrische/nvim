@@ -5,3 +5,5 @@ vim.api.nvim_create_user_command('Wa', 'wa ++p', {})
 vim.api.nvim_create_user_command('WA', 'wa ++p', {})
 vim.api.nvim_create_user_command('Wq', 'wq ++p', {})
 vim.api.nvim_create_user_command('WQ', 'wq ++p', {})
+
+vim.api.nvim_create_user_command('TH', 'Telescope help_tags', {})

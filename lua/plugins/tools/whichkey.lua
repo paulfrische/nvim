@@ -1,4 +1,6 @@
 local wk = require('which-key')
+
+-- custom mappings
 wk.register({
   -- Telescope
   f = { '<cmd>Telescope find_files<cr>', 'Fuzzy Find Files' },
@@ -29,6 +31,29 @@ wk.register({
   -- trouble
   e = { '<cmd>TroubleToggle<cr>', 'Open/Close Trouble.nvim' },
 
+  -- neorg
+  nn = { '<cmd>Neorg index<cr>', 'Open Neorg' },
+  nr = { '<cmd>Neorg return<cr>', 'Open Neorg' },
+
+  -- lazy
+  p = { '<cmd>Lazy<cr>', 'Open Lazy UI' },
+
   -- compile code
   c = { require('core.compile').compile, 'Compile Code' },
+
+  -- split
+  v = { '<cmd>vsplit<cr>', 'Vertical Split' },
 }, { prefix = '<leader>' })
+
+-- remaps
+wk.register({
+  ['<C-u>'] = { '<C-u>zz', 'jump up half a page' },
+  ['<C-d>'] = { '<C-d>zz', 'jump down half a page' },
+  ['<ESC>'] = { '<cmd>noh<cr>', 'clear (search) highlights' },
+  n = { 'nzz', 'next search result' },
+  N = { 'Nzz', 'previous search result' },
+})
+
+wk.register({
+  ['<ESC>'] = { '<C-\\><C-n>', 'exit terminal' },
+}, { mode = 't' })

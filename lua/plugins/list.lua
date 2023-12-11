@@ -47,9 +47,15 @@ return {
   -- files
   {
     'stevearc/oil.nvim',
-    lazy = true,
-    cmd = 'Oil',
+    lazy = false,
     config = cfg('tools.oil'),
+  },
+
+  -- gitsigns
+  {
+    'lewis6991/gitsigns.nvim',
+    event = 'VeryLazy',
+    config = true,
   },
 
   -- mini.nvim
@@ -105,6 +111,14 @@ return {
     'folke/trouble.nvim',
     cmd = { 'Trouble', 'TroubleToggle' },
     config = true,
+  },
+
+  -- format
+  {
+    'stevearc/conform.nvim',
+    event = 'BufWritePre',
+    cmd = { 'ConformInfo' },
+    config = cfg('tools.conform'),
   },
 
   -- LSP
