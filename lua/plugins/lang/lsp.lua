@@ -7,7 +7,11 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 require('mason-lspconfig').setup({
-  ensure_installed = {},
+  ensure_installed = {
+
+    'rust_analyzer',
+    'lua_ls',
+  },
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
@@ -17,3 +21,5 @@ require('mason-lspconfig').setup({
     end,
   },
 })
+
+require('neodev').setup({})

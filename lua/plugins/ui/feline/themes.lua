@@ -1,0 +1,15 @@
+require('feline').add_theme('kanagawa', {
+  fg = '#dcd7ba',
+  bg = '#16161d',
+  black = '#1f1f28',
+  skyblue = '#7fb4ca',
+  cyan = '#6a9589',
+  green = '#98bb6c',
+  oceanblue = '#223249',
+  magenta = '#d27e99',
+  orange = '#ffa066',
+  red = '#ff5d62',
+  violet = '#957fb8',
+  white = '#c8c093',
+  yellow = '#ff9e3b',
+})

@@ -40,7 +40,71 @@ return {
   {
     'rebelot/kanagawa.nvim',
     lazy = false,
+    priority = 1000,
     config = cfg('ui.kanagawa'),
+  },
+
+  -- files
+  {
+    'stevearc/oil.nvim',
+    lazy = true,
+    cmd = 'Oil',
+    config = cfg('tools.oil'),
+  },
+
+  -- mini.nvim
+  {
+    'echasnovski/mini.nvim',
+    lazy = true,
+    event = { 'VeryLazy', 'InsertEnter' },
+    config = cfg('tools.mini'),
+  },
+
+  -- feline
+  {
+    'freddiehaddad/feline.nvim',
+    lazy = false,
+    config = cfg('ui.feline'),
+  },
+
+  -- git good noob
+  {
+    'NeogitOrg/neogit',
+    dependencies = {
+      { 'sindrets/diffview.nvim' },
+    },
+    cmd = 'Neogit',
+    config = true,
+  },
+
+  -- terminal
+  {
+    'akinsho/toggleterm.nvim',
+    cmd = 'ToggleTerm',
+    config = true,
+  },
+
+  -- neorg
+  {
+    'nvim-neorg/neorg',
+    cmd = 'Neorg',
+    build = ':Neorg sync-parsers',
+    config = cfg('tools.neorg'),
+  },
+
+  -- shiny comments
+  {
+    'folke/todo-comments.nvim',
+    event = 'BufEnter',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = true,
+  },
+
+  -- trouble
+  {
+    'folke/trouble.nvim',
+    cmd = { 'Trouble', 'TroubleToggle' },
+    config = true,
   },
 
   -- LSP
@@ -66,6 +130,7 @@ return {
 
         -- styling
         { 'onsails/lspkind.nvim' },
+        { 'nvim-tree/nvim-web-devicons' },
 
         -- other sources
         { 'hrsh7th/cmp-emoji' },
@@ -84,6 +149,7 @@ return {
       dependencies = {
         { 'williamboman/mason-lspconfig.nvim' },
         { 'hrsh7th/cmp-nvim-lsp' },
+        { 'folke/neodev.nvim' },
       },
       config = cfg('lang.lsp'),
     },
