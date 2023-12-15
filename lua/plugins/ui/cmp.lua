@@ -17,7 +17,7 @@ local sources = {
 local formatting = {
   fields = { 'abbr', 'kind', 'menu' },
   format = require('lspkind').cmp_format({
-    mode = 'symbol_text',
+    mode = 'symbol',
   }),
 }
 

@@ -51,6 +51,15 @@ return {
     config = cfg('tools.oil'),
   },
 
+  {
+    '2KAbhishek/nerdy.nvim',
+    dependencies = {
+      -- 'stevearc/dressing.nvim',
+      'nvim-telescope/telescope.nvim',
+    },
+    cmd = 'Nerdy',
+  },
+
   -- gitsigns
   {
     'lewis6991/gitsigns.nvim',
@@ -134,7 +143,7 @@ return {
       end,
     },
 
-    { 'williamboman/mason.nvim', lazy = false, config = true },
+    { 'williamboman/mason.nvim', config = true },
 
     {
       'hrsh7th/nvim-cmp',
