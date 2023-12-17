@@ -44,6 +44,13 @@ return {
     config = cfg('ui.kanagawa'),
   },
 
+  -- other color
+  {
+    'uga-rosa/ccc.nvim',
+    event = 'BufEnter',
+    config = cfg('ui.ccc'),
+  },
+
   -- files
   {
     'stevearc/oil.nvim',
