@@ -32,6 +32,7 @@ return {
       },
       'nvim-telescope/telescope-ui-select.nvim',
     },
+    event = 'VeryLazy',
     cmd = 'Telescope',
     config = cfg('tools.telescope'),
   },

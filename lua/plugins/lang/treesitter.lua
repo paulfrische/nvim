@@ -21,6 +21,14 @@ require('nvim-treesitter.configs').setup({
           query = '@class.inner',
           desc = 'select class [inner]',
         },
+        ['il'] = {
+          query = '@loop.inner',
+          desc = 'select loop [inner]',
+        },
+        ['al'] = {
+          query = '@loop.outer',
+          desc = 'select loop [outer]',
+        },
       },
     },
   },

@@ -19,6 +19,9 @@ wk.register({
     'Find String in Project 󰖷',
   },
 
+  -- code actions
+  a = { vim.lsp.buf.code_action, 'perform code actions ' },
+
   -- Oil
   x = { '<cmd>Oil<cr>', 'Open Oil.nvim ' },
 
