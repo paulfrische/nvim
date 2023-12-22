@@ -39,8 +39,14 @@ vim.opt.guicursor = ''
 
 vim.opt.confirm = true
 
+vim.opt.virtualedit = 'block'
+vim.opt.inccommand = 'split'
+
+vim.opt.termguicolors = true
+
 -- autoindent
 vim.keymap.set('n', 'i', function()
+  ---@diagnostic disable-next-line: param-type-mismatch
   if #vim.fn.getline('.') == 0 then
     return '"_cc'
   end

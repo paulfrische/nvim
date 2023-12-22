@@ -1,7 +1,9 @@
 local M = {}
 
+local icons = require('common.icons')
+
 M.icon = {
-  provider = '  ',
+  provider = ' ' .. icons.LAMBDA .. ' ',
   hl = {
     fg = 'red',
   },
@@ -21,7 +23,15 @@ M.vi_mode = {
   hl = vi_mode_hl,
 }
 -- util
-local make_component = function(name)
+local make_component = function(name, icon)
+  if icon ~= nil then
+    return {
+      provider = name,
+      icon = ' ' .. icon .. ' ',
+      left_sep = ' ',
+      right_sep = ' ',
+    }
+  end
   return {
     provider = name,
     left_sep = ' ',
@@ -36,10 +46,10 @@ M.file_info = make_component('file_info')
 M.git_added = make_component('git_diff_added')
 M.git_removed = make_component('git_diff_removed')
 M.git_changed = make_component('git_diff_changed')
-M.git_branch = make_component('git_branch')
+M.git_branch = make_component('git_branch', icons.GIT)
 
 -- lsp
-M.lsp_name = make_component('lsp_client_names')
+M.lsp_name = make_component('lsp_client_names', icons.LSP)
 M.lsp_errors = make_component('diagnostic_errors')
 M.lsp_warnings = make_component('diagnostic_warnings')
 M.lsp_hints = make_component('diagnostic_hints')
