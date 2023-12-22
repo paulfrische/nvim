@@ -47,8 +47,8 @@ wk.register({
   c = { require('core.compile').compile, 'Compile Code ' .. icons.UTIL },
 
   -- split
-  v = { '<cmd>vsplit<cr>', 'Vertical Split ' .. icons.UTIL },
-  h = { '<cmd>split<cr>', 'Horizontal Split ' .. icons.UTIL },
+  v = { '<cmd>vsplit<cr><cmd>Oil<cr>', 'Vertical Split ' .. icons.UTIL .. ' ' .. icons.FILES },
+  h = { '<cmd>split<cr><cmd>Oil<cr>', 'Horizontal Split ' .. icons.UTIL .. ' ' .. icons.FILES },
 }, { prefix = '<leader>' })
 
 -- remaps
@@ -58,6 +58,9 @@ wk.register({
   ['<ESC>'] = { '<cmd>noh<cr>', 'clear (search) highlights ' .. icons.UTIL },
   n = { 'nzz', 'next search result ' .. icons.UTIL },
   N = { 'Nzz', 'previous search result ' .. icons.UTIL },
+
+  -- Oil
+  ['-'] = { '<cmd>Oil<cr>', 'Open Oil' .. icons.FILES },
 })
 
 wk.register({

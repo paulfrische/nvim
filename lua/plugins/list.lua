@@ -45,14 +45,6 @@ return {
     config = cfg('ui.kanagawa'),
   },
 
-  -- dashboard
-  {
-    'nvimdev/dashboard-nvim',
-    event = 'VimEnter',
-    dependencies = { { 'nvim-tree/nvim-web-devicons' } },
-    config = cfg('ui.dashboard'),
-  },
-
   -- other color
   {
     'uga-rosa/ccc.nvim',
