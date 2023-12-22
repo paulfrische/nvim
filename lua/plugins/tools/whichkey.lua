@@ -48,6 +48,7 @@ wk.register({
 
   -- split
   v = { '<cmd>vsplit<cr>', 'Vertical Split ' .. icons.UTIL },
+  h = { '<cmd>split<cr>', 'Horizontal Split ' .. icons.UTIL },
 }, { prefix = '<leader>' })
 
 -- remaps

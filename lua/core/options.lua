@@ -20,6 +20,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
 
 vim.opt.title = true
 
@@ -43,6 +44,9 @@ vim.opt.virtualedit = 'block'
 vim.opt.inccommand = 'split'
 
 vim.opt.termguicolors = true
+
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
 -- autoindent
 vim.keymap.set('n', 'i', function()
