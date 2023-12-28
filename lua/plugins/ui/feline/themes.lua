@@ -13,3 +13,19 @@ require('feline').add_theme('kanagawa', {
   white = '#c8c093',
   yellow = '#ff9e3b',
 })
+
+require('feline').add_theme('noirbuddy', {
+  fg = '#d5d5d5',
+  bg = '#212121',
+  black = '#323232',
+  skyblue = '#47eae0',
+  cyan = '#00ff77',
+  green = '#00ff77',
+  oceanblue = '#47eae0',
+  magenta = '#ff0088',
+  orange = '#ff7700',
+  red = '#ff0038',
+  violet = '#ff0088',
+  white = '#ffffff',
+  yellow = '#ff7700',
+})

@@ -4,6 +4,8 @@ local function cfg(p)
   end
 end
 
+local themes = require('plugins.colorscheme')
+
 return {
   {
     'folke/which-key.nvim',
@@ -16,6 +18,7 @@ return {
     dependencies = {
       { 'nvim-treesitter/nvim-treesitter-textobjects' },
       { 'nvim-treesitter/nvim-treesitter-context' },
+      { 'windwp/nvim-ts-autotag' },
     },
     event = { 'BufNew', 'BufReadPre', 'InsertEnter' },
     build = ':TSUpdate',
@@ -42,7 +45,19 @@ return {
     'rebelot/kanagawa.nvim',
     lazy = false,
     priority = 1000,
+    enabled = themes.selected == themes.themes.KANAGAWA,
     config = cfg('ui.kanagawa'),
+  },
+
+  {
+    'jesseleite/nvim-noirbuddy',
+    dependencies = {
+      { 'tjdevries/colorbuddy.nvim', branch = 'dev' },
+    },
+    enabled = themes.selected == themes.themes.NOIRBUDDY,
+    lazy = false,
+    priority = 1000,
+    config = cfg('ui.noirbuddy'),
   },
 
   -- other color

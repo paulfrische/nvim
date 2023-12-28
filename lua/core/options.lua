@@ -14,10 +14,8 @@ vim.opt.hlsearch = false
 
 vim.opt.wrap = true
 
-vim.opt.cmdheight = 0
-
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
@@ -31,9 +29,8 @@ vim.opt.fillchars:append('eob: ')
 vim.opt.undofile = true
 vim.opt.swapfile = false
 
-vim.opt.cursorline = true
-
 vim.opt.updatetime = 50
+
 vim.opt.signcolumn = 'yes'
 
 vim.opt.guicursor = ''
