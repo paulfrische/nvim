@@ -20,8 +20,6 @@ telescope.setup({
       preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
     },
 
-    preview = false,
-
     prompt_prefix = ' 🔎 ',
     selection_caret = '➡️ ',
 
