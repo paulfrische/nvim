@@ -60,6 +60,14 @@ return {
     config = cfg('ui.noirbuddy'),
   },
 
+  {
+    'ellisonleao/gruvbox.nvim',
+    enabled = themes.selected == themes.themes.GRUVBOX,
+    lazy = false,
+    priority = 1000,
+    config = cfg('ui.gruvbox'),
+  },
+
   -- other color
   {
     'uga-rosa/ccc.nvim',

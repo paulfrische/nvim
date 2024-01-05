@@ -31,6 +31,9 @@ vim.opt.termguicolors = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+vim.opt.spelllang = 'en_us,de_20'
+vim.opt.spell = true
+
 -- autoindent
 vim.keymap.set('n', 'i', function()
   ---@diagnostic disable-next-line: param-type-mismatch

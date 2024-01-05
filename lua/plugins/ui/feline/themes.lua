@@ -29,3 +29,19 @@ require('feline').add_theme('noirbuddy', {
   white = '#ffffff',
   yellow = '#ff7700',
 })
+
+require('feline').add_theme('gruvbox', {
+  fg = '#ebdbb2',
+  bg = '#1d2021',
+  black = '#1d2021',
+  skyblue = '#83a598',
+  cyan = '#689d6a',
+  green = '#98971a',
+  oceanblue = '#458588',
+  magenta = '#b16286',
+  orange = '#fe8019',
+  red = '#cc241d',
+  violet = '#d4869b',
+  white = '#fbf1c7',
+  yellow = '#d79921',
+})

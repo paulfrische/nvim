@@ -1,9 +1,10 @@
 local theme = {
   KANAGAWA = 'KANAGAWA',
   NOIRBUDDY = 'NOIRBUDDY',
+  GRUVBOX = 'GRUVBOX',
 }
 
 return {
   themes = theme,
-  selected = theme.NOIRBUDDY, -- change colorscheme here
+  selected = theme.GRUVBOX, -- change colorscheme here
 }
