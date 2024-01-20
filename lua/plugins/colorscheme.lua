@@ -6,5 +6,5 @@ local theme = {
 
 return {
   themes = theme,
-  selected = theme.GRUVBOX, -- change colorscheme here
+  selected = theme.KANAGAWA, -- change colorscheme here
 }

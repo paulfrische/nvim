@@ -1,3 +1,4 @@
+---@diagnostic disable: redefined-local
 local ok, telescope = pcall(require, 'telescope')
 if not ok then
   print('error loading telescope')
@@ -13,12 +14,6 @@ telescope.setup({
   },
   defaults = {
     sorting_strategy = 'ascending',
-    borderchars = {
-      { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
-      prompt = { '─', '│', ' ', '│', '┌', '┐', '│', '│' },
-      results = { '─', '│', '─', '│', '├', '┤', '┘', '└' },
-      preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
-    },
 
     prompt_prefix = ' 🔎 ',
     selection_caret = '➡️ ',
@@ -29,7 +24,6 @@ telescope.setup({
       '.git/',
     },
 
-    layout_strategy = 'center',
     layout_config = {
       anchor = 'CENTER',
     },
