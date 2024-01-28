@@ -30,6 +30,7 @@ vim.opt.inccommand = 'split'
 vim.opt.termguicolors = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.foldcolumn = '1'
 
 vim.opt.spelllang = 'en_us,de_20'
 vim.opt.spell = true

@@ -4,6 +4,7 @@ lsp_zero.extend_lspconfig()
 lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({ buffer = bufnr })
   vim.keymap.set('n', 'gn', vim.lsp.buf.rename, { desc = 'Rename Symbol', buffer = true })
+  vim.lsp.inlay_hint.enable(0, true)
 end)
 
 require('mason-lspconfig').setup({
