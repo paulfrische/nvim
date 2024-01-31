@@ -32,8 +32,8 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.foldcolumn = '1'
 
-vim.opt.spelllang = 'en_us,de_20'
-vim.opt.spell = true
+-- vim.opt.spelllang = 'en_us,de_20'
+-- vim.opt.spell = true
 
 -- autoindent
 vim.keymap.set('n', 'i', function()

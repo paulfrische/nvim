@@ -56,12 +56,34 @@ wk.register({
   ['<C-u>'] = { '<C-u>zz', 'jump up half a page ' .. icons.UTIL },
   ['<C-d>'] = { '<C-d>zz', 'jump down half a page ' .. icons.UTIL },
   ['<ESC>'] = { '<cmd>noh<cr>', 'clear (search) highlights ' .. icons.UTIL },
-  n = { 'nzz', 'next search result ' .. icons.UTIL },
-  N = { 'Nzz', 'previous search result ' .. icons.UTIL },
+  ['n'] = { 'nzz', 'next search result ' .. icons.UTIL },
+  ['N'] = { 'Nzz', 'previous search result ' .. icons.UTIL },
+
+  -- trouble
+  ['[d'] = {
+    function()
+      require('trouble').next({})
+    end,
+    'Jump to next diagnostic ' .. icons.LSP,
+  },
+  [']d'] = {
+    function()
+      require('trouble').previous({})
+    end,
+    'Jump to previous diagnostic ' .. icons.LSP,
+  },
+
+  ['<C-i>'] = { '<C-i>', 'jump to next location' },
+  ['<Tab>'] = { '<C-w>w', 'cycle through windows' .. icons.UTIL },
 
   -- Oil
   ['-'] = { '<cmd>Oil<cr>', 'Open Oil' .. icons.FILES },
 })
+
+wk.register({
+  ['J'] = { ':m \'>+1<cr>gv=gv', 'Move selected text up by 1 line ' .. icons.UTIL },
+  ['K'] = { ':m \'>-2<cr>gv=gv', 'Move selected text down by 1 line ' .. icons.UTIL },
+}, { mode = 'v' })
 
 wk.register({
   ['<ESC>'] = { '<C-\\><C-n>', 'exit terminal ' .. icons.TERMINAL },
