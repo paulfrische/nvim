@@ -44,7 +44,7 @@ M.compile = function()
     border = 'single',
   }))
 
-  local success, _ = pcall(vim.fn.termopen, vim.split(command, ' '))
+  local success, _ = pcall(vim.fn.termopen, { 'sh', '-c', command })
   if not success then
     vim.api.nvim_win_close(win, true)
     error('invalid compile command ' .. command)
