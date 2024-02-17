@@ -1,8 +1,8 @@
 local M = {}
 
-require('plugins.ui.feline.themes')
+require('custom.plugins.feline.themes')
 
-local components = require('plugins.ui.feline.components')
+local components = require('custom.plugins.feline.components')
 M.components = {}
 
 M.components.active = {

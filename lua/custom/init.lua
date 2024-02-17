@@ -11,4 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup('plugins.list')
+require('lazy').setup('custom.plugins')
+
+vim.cmd.colorscheme('kanagawa-wave')
