@@ -6,6 +6,6 @@ require('mini.splitjoin').setup()
 
 require('mini.comment').setup()
 
-require('mini.pairs').setup({
-  modes = { command = true },
-})
+-- require('mini.pairs').setup({
+--   modes = { command = true },
+-- })

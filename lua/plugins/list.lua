@@ -43,29 +43,10 @@ return {
   -- color
   {
     'rebelot/kanagawa.nvim',
-    lazy = false,
-    priority = 1000,
-    enabled = themes.selected == themes.themes.KANAGAWA,
+    lazy = true,
+    -- priority = 1000,
+    -- enabled = themes.selected == themes.themes.KANAGAWA,
     config = cfg('ui.kanagawa'),
-  },
-
-  {
-    'jesseleite/nvim-noirbuddy',
-    dependencies = {
-      { 'tjdevries/colorbuddy.nvim', branch = 'dev' },
-    },
-    enabled = themes.selected == themes.themes.NOIRBUDDY,
-    lazy = false,
-    priority = 1000,
-    config = cfg('ui.noirbuddy'),
-  },
-
-  {
-    'ellisonleao/gruvbox.nvim',
-    enabled = themes.selected == themes.themes.GRUVBOX,
-    lazy = false,
-    priority = 1000,
-    config = cfg('ui.gruvbox'),
   },
 
   -- other color
