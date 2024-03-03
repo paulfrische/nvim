@@ -2,6 +2,7 @@ return {
   'freddiehaddad/feline.nvim',
   lazy = true,
   event = 'ColorScheme',
+  enabled = false,
   config = function()
     local components = require('custom.plugins.feline.config').components
     local properties = require('custom.plugins.feline.config').properties

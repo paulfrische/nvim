@@ -14,5 +14,7 @@ return {
     require('mini.pairs').setup({
       modes = { command = true },
     })
+
+    require('mini.statusline').setup()
   end,
 }
