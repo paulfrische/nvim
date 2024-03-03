@@ -14,6 +14,22 @@ require('feline').add_theme('kanagawa', {
   yellow = '#ff9e3b',
 })
 
+require('feline').add_theme('tokyonight', {
+  fg = '#c0caf5',
+  bg = '#15161e',
+  black = '#1a1b26',
+  skyblue = '#7dcfff',
+  cyan = '#9ece6a',
+  green = '#9ece6a',
+  oceanblue = '#7aa2f7',
+  magenta = '#bb9af7',
+  orange = '#e0af68',
+  red = '#f7768e',
+  violet = '#bb9af7',
+  white = '#c0caf5',
+  yellow = '#e0af68',
+})
+
 require('feline').add_theme('noirbuddy', {
   fg = '#d5d5d5',
   bg = '#212121',

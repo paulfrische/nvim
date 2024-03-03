@@ -13,4 +13,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup('custom.plugins')
 
-vim.cmd.colorscheme('kanagawa-wave')
+vim.cmd.colorscheme('tokyonight-night')

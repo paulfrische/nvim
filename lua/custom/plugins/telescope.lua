@@ -25,22 +25,6 @@ return {
         },
         ['ui-select'] = {},
       },
-      defaults = {
-        sorting_strategy = 'ascending',
-
-        prompt_prefix = ' 🔎 ',
-        selection_caret = '➡️ ',
-
-        file_ignore_patterns = {
-          '__pycache__/',
-          'node_modules/',
-          '.git/',
-        },
-
-        layout_config = {
-          anchor = 'CENTER',
-        },
-      },
     })
 
     local ok, err = pcall(telescope.load_extension, 'fzf')

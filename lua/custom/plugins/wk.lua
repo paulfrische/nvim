@@ -24,6 +24,7 @@ return {
         end,
         'Find String in Project ' .. icons.UTIL,
       },
+      ['<leader>'] = { '<cmd>Telescope buffers<cr>', 'Fuzzy Find Buffers ' .. icons.PLUGIN },
 
       -- code actions
       a = { vim.lsp.buf.code_action, 'perform code actions ' .. icons.LSP },
@@ -47,8 +48,12 @@ return {
       -- lazy
       p = { '<cmd>Lazy<cr>', 'Open Lazy UI ' .. icons.PLUGIN },
 
-      -- compile code
-      c = { require('core.compile').compile, 'Compile Code ' .. icons.UTIL },
+      -- -- compile code
+      -- c = { require('core.compile').compile, 'Compile Code ' .. icons.UTIL },
+      c = { '<cmd>Compile<cr>', 'Compile Code ' .. icons.PLUGIN },
+
+      -- zenmode
+      z = { '<cmd>ZenMode<cr>', 'Toggle Zen Mode' .. icons.PLUGIN },
 
       -- split
       v = { '<cmd>vsplit<cr><cmd>Oil<cr>', 'Vertical Split ' .. icons.UTIL .. ' ' .. icons.FILES },
@@ -65,15 +70,11 @@ return {
 
       -- trouble
       ['[d'] = {
-        function()
-          require('trouble').next({})
-        end,
+        vim.diagnostic.goto_next,
         'Jump to next diagnostic ' .. icons.LSP,
       },
       [']d'] = {
-        function()
-          require('trouble').previous({})
-        end,
+        vim.diagnostic.goto_prev,
         'Jump to previous diagnostic ' .. icons.LSP,
       },
 
