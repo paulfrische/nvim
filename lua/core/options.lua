@@ -1,4 +1,5 @@
 vim.g.mapleader = ' '
+
 vim.opt.clipboard = 'unnamedplus'
 
 vim.opt.tabstop = 4
@@ -19,7 +20,7 @@ vim.opt.sidescrolloff = 8
 vim.opt.title = true
 
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣', eol = '¬' }
 
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath('data') .. '/undofiles'
