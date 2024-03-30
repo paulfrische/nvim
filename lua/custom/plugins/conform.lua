@@ -10,6 +10,7 @@ return {
         lua = { 'stylua' },
         python = { 'black' },
         rust = { 'rustfmt' },
+        tex = { 'bibtex-tidy' },
       },
 
       format_on_save = function(bufnr)

@@ -1,7 +1,7 @@
 return {
   'paulfrische/compile.nvim',
   opts = {
-    type = 'split',
+    type = 'float',
   },
   enabled = true,
 }

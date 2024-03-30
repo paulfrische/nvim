@@ -50,7 +50,6 @@ return {
       p = { '<cmd>Lazy<cr>', 'Open Lazy UI ' .. icons.PLUGIN },
 
       -- -- compile code
-      -- c = { require('core.compile').compile, 'Compile Code ' .. icons.UTIL },
       c = { '<cmd>Compile<cr>', 'Compile Code ' .. icons.PLUGIN },
 
       -- zenmode

@@ -5,6 +5,7 @@ return {
   },
   opts = {
     window = {
+      backdrop = 1,
       options = {
         number = false,
         relativenumber = false,
