@@ -79,7 +79,11 @@ return {
 
       cmp.setup({
         formatting = formatting,
-
+        view = {
+          entries = {
+            follow_cursor = true,
+          },
+        },
         sources = sources,
         mapping = cmp.mapping.preset.insert({
           ['<CR>'] = cmp.mapping.confirm({

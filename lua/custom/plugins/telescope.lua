@@ -1,3 +1,5 @@
+local icons = require('common.icons')
+
 return {
   'nvim-telescope/telescope.nvim',
   dependencies = {
@@ -8,7 +10,28 @@ return {
     },
     'nvim-telescope/telescope-ui-select.nvim',
   },
-  event = 'VeryLazy',
+  keys = {
+    { '<leader>f', '<cmd>Telescope find_files<cr>', desc = 'Fuzzy Find Files ' .. icons.FILES },
+    { '<leader>ds', '<cmd>Telescope lsp_document_symbols<cr>', desc = 'Telescope LSP Document Symbols ' .. icons.LSP },
+    {
+      '<leader>ws',
+      '<cmd>Telescope lsp_workspace_symbols<cr>',
+      desc = 'Telescope LSP Workspace Symbols ' .. icons.LSP,
+    },
+    {
+      '<leader>s',
+      function()
+        local prompt = vim.fn.input('Grep > ')
+        if prompt == '' then
+          return
+        end
+        require('telescope.builtin').grep_string({
+          search = prompt,
+        })
+      end,
+      desc = 'Find String in Project ' .. icons.UTIL,
+    },
+  },
   cmd = 'Telescope',
   config = function()
     ---@diagnostic disable: redefined-local

@@ -2,6 +2,8 @@ vim.g.mapleader = ' '
 
 vim.opt.clipboard = 'unnamedplus'
 
+vim.opt.laststatus = 3
+
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -36,12 +38,13 @@ vim.opt.signcolumn = 'yes'
 
 vim.opt.virtualedit = 'block'
 
-vim.opt.inccommand = 'split'
-
 vim.opt.termguicolors = true
+
+vim.opt.inccommand = 'split'
 
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.splitkeep = 'screen'
 
 -- vim.opt.foldcolumn = '1'
 -- vim.opt.foldmethod = 'expr'

@@ -1,7 +1,14 @@
+local icons = require('common.icons')
+
 return {
   'nvim-neorg/neorg',
-  cmd = 'Neorg',
-  build = ':Neorg sync-parsers',
+  dependencies = { 'luarocks.nvim' },
+  version = '*',
+  lazy = false,
+  keys = {
+    { '<leader>nn', '<cmd>Neorg index<cr>', desc = 'Open Neorg ' .. icons.NOTES },
+    { '<leader>nr', '<cmd>Neorg return<cr>', desc = 'Open Neorg ' .. icons.NOTES },
+  },
   config = function()
     require('neorg').setup({
       load = {

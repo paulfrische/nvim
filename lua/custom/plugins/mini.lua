@@ -15,6 +15,15 @@ return {
       modes = { command = true },
     })
 
+    require('mini.move').setup({
+      mappings = {
+        left = 'H',
+        right = 'L',
+        down = 'J',
+        up = 'K',
+      },
+    })
+
     require('mini.statusline').setup()
   end,
 }
