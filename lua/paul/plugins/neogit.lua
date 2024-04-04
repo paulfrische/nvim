@@ -1,4 +1,4 @@
-local icons = require('common.icons')
+local icons = require('paul.icons')
 
 return {
   'NeogitOrg/neogit',

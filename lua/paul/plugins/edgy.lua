@@ -21,7 +21,7 @@ return {
     right = {
       {
         ft = 'help',
-        size = { width = 0.6 },
+        size = { width = 0.8 },
       },
     },
   },

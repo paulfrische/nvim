@@ -1,21 +1,7 @@
-local icons = require('common.icons')
+local icons = require('paul.icons')
 
 vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, { desc = 'perform code actions ' .. icons.LSP })
 vim.keymap.set('n', '<leader>p', '<cmd>Lazy<cr>', { desc = 'Open Lazy UI ' .. icons.PLUGIN })
-
--- splitting
-vim.keymap.set(
-  'n',
-  '<leader>v',
-  '<cmd>vsplit<cr><cmd>Oil<cr>',
-  { desc = 'Vertical Split ' .. icons.UTIL .. ' ' .. icons.FILES }
-)
-vim.keymap.set(
-  'n',
-  '<leader>h',
-  '<cmd>split<cr><cmd>Oil<cr>',
-  { desc = 'Horizontal Split ' .. icons.UTIL .. ' ' .. icons.FILES }
-)
 
 -- jumping
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'jump up half a page ' .. icons.UTIL })
@@ -27,3 +13,6 @@ vim.keymap.set('n', '<Tab>', '<C-w>w', { desc = 'cycle through windows ' .. icon
 
 vim.keymap.set('n', '<Esc>', '<cmd>noh<cr>', { desc = 'clear search highlights' .. icons.UTIL })
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'exit terminal ' .. icons.TERMINAL })
+
+vim.keymap.set('n', '<leader>+', '<C-a>', { desc = 'Increment number ' .. icons.UTIL })
+vim.keymap.set('n', '<leader>-', '<C-x>', { desc = 'Decrement number ' .. icons.UTIL })

@@ -1,4 +1,3 @@
-require('core')
-require('custom')
+require('paul')
 
 vim.cmd.colorscheme('kanagawa')
