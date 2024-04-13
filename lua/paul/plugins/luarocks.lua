@@ -1,5 +1,5 @@
 return {
   'vhyrro/luarocks.nvim',
-  priority = 1000,
+  priority = 10000,
   config = true,
 }

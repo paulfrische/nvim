@@ -27,7 +27,6 @@ return {
       { 'hrsh7th/cmp-cmdline' },
       { 'hrsh7th/cmp-path' },
       { 'hrsh7th/cmp-buffer' },
-      { 'Saecki/crates.nvim' },
     },
     config = function()
       -- Here is where you configure the autocompletion settings.
@@ -40,7 +39,6 @@ return {
         { name = 'neorg' },
         { name = 'nvim_lsp', priority = 1000 },
         { name = 'luasnip', keyword_length = 2 },
-        { name = 'crates' },
         { name = 'emoji' },
         { name = 'path' },
         { name = 'buffer' },
