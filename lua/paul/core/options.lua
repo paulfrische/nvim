@@ -24,6 +24,7 @@ vim.opt.title = true
 
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣', eol = '¬' }
+vim.opt.fillchars = { eob = ' ' }
 
 vim.opt.cmdheight = 0
 
@@ -46,13 +47,6 @@ vim.opt.inccommand = 'split'
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.splitkeep = 'screen'
-
--- vim.opt.foldcolumn = '1'
--- vim.opt.foldmethod = 'expr'
--- vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
--- vim.api.nvim_create_autocmd({ 'BufReadPost' }, {
---   command = 'normal zR',
--- })
 
 vim.opt.showmode = false
 

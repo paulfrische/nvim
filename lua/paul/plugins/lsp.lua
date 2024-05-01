@@ -146,7 +146,7 @@ return {
         lsp_zero.default_keymaps({ buffer = bufnr })
         vim.keymap.set('n', 'gn', vim.lsp.buf.rename, { desc = 'Rename Symbol', buffer = true })
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Goto Definition', buffer = true })
-        vim.lsp.inlay_hint.enable(0, true)
+        vim.lsp.inlay_hint.enable(true)
       end)
 
       require('mason-lspconfig').setup({
