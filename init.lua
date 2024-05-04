@@ -1,3 +1,3 @@
 require('paul')
 
-vim.cmd.colorscheme('kanagawa')
+vim.cmd.colorscheme('cyberdream')

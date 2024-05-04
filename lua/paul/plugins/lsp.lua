@@ -16,7 +16,7 @@ return {
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {
-      { 'L3MON4D3/LuaSnip' },
+      { 'L3MON4D3/LuaSnip', dependencies = { { 'rafamadriz/friendly-snippets' }, { 'saadparwaiz1/cmp_luasnip' } } },
 
       -- styling
       { 'onsails/lspkind.nvim' },
@@ -35,10 +35,12 @@ return {
 
       local cmp = require('cmp')
 
+      require('luasnip.loaders.from_vscode').lazy_load()
+
       local sources = {
-        { name = 'neorg' },
         { name = 'nvim_lsp', priority = 1000 },
-        { name = 'luasnip', keyword_length = 2 },
+        { name = 'neorg' },
+        { name = 'luasnip' },
         { name = 'emoji' },
         { name = 'path' },
         { name = 'buffer' },
@@ -72,17 +74,23 @@ return {
         serverity_sort = true,
       })
 
-      -- load custom snippets
-      require('luasnip.loaders.from_vscode').lazy_load()
-
       cmp.setup({
         formatting = formatting,
+
         view = {
           entries = {
             follow_cursor = true,
           },
         },
+
         sources = sources,
+
+        snippet = {
+          expand = function(args)
+            require('luasnip').lsp_expand(args.body)
+          end,
+        },
+
         mapping = cmp.mapping.preset.insert({
           ['<CR>'] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
