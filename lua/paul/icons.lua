@@ -7,4 +7,5 @@ return {
   PLUGIN = '󱐥',
   NOTES = '󰺿',
   GIT = '󰊢',
+  MUSIC = '',
 }
