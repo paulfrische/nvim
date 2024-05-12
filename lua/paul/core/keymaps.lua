@@ -11,6 +11,9 @@ vim.keymap.set('n', 'N', 'Nzz', { desc = 'previous search result ' .. icons.UTIL
 vim.keymap.set('n', '<C-i>', '<C-i>', { desc = 'jump to next location in jumplist ' .. icons.UTIL })
 vim.keymap.set('n', '<Tab>', '<C-w>w', { desc = 'cycle through windows ' .. icons.UTIL })
 
+vim.keymap.set('n', 'H', '_', { desc = 'jump through (logical) start of line ' .. icons.UTIL })
+vim.keymap.set('n', 'L', '$', { desc = 'jump through (logical) end of line ' .. icons.UTIL })
+
 vim.keymap.set('n', '<Esc>', '<cmd>noh<cr>', { desc = 'clear search highlights' .. icons.UTIL })
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'exit terminal ' .. icons.TERMINAL })
 
