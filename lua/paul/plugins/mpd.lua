@@ -2,8 +2,11 @@ local icons = require('paul.icons')
 
 return {
   'paulfrische/mpd.nvim',
-  keys = {
-    { '<leader>ma', '<cmd>lua require("mpd").actions()<cr>', desc = 'Control MPD ' .. icons.MUSIC },
-    { '<leader>mt', '<cmd>lua require("mpd").toggle()<cr>', desc = 'Pause/Play MPD ' .. icons.MUSIC },
-  },
+  config = function()
+    local mpd = require('mpd')
+    mpd.setup({})
+
+    vim.keymap.set('n', '<leader>ma', mpd.actions, { desc = 'Control MPD ' .. icons.MUSIC })
+    vim.keymap.set('n', '<leader>mt', mpd.toggle, { desc = 'Pause/Play MPD ' .. icons.MUSIC })
+  end,
 }

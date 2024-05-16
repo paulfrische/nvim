@@ -4,7 +4,7 @@ return {
   'nvim-neorg/neorg',
   dependencies = { 'luarocks.nvim', 'nvim-neorg/neorg-telescope' },
   version = '*',
-  lazy = false,
+  -- lazy = false,
   keys = {
     { '<leader>nn', '<cmd>Neorg index<cr>', desc = 'Open Neorg ' .. icons.NOTES },
     { '<leader>nr', '<cmd>Neorg return<cr>', desc = 'Open Neorg ' .. icons.NOTES },

@@ -2,6 +2,7 @@ local icons = require('paul.icons')
 
 return {
   'folke/trouble.nvim',
+  enabled = false,
   branch = 'dev',
   keys = {
     {

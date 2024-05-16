@@ -1,14 +1,15 @@
-local icons = require('paul.icons')
-
 return {
   'NeogitOrg/neogit',
   dependencies = {
     'sindrets/diffview.nvim',
   },
-  keys = {
-    { '<leader>gg', '<cmd>Neogit<cr>', desc = 'Open Neogit ' .. icons.GIT },
-  },
-  cmd = 'Neogit',
   branch = 'nightly',
-  config = true,
+  config = function()
+    local icons = require('paul.icons')
+
+    local neogit = require('neogit')
+    neogit.setup({})
+
+    vim.keymap.set('n', '<leader>gg', neogit.open, { desc = 'Open Neogit ' .. icons.GIT })
+  end,
 }
