@@ -18,6 +18,8 @@ return {
     local cmp = require('cmp')
     local lspkind = require('lspkind')
 
+    vim.opt.completeopt = 'menuone,noinsert,noselect,popup'
+
     cmp.setup({
       ---@diagnostic disable-next-line: missing-fields
       formatting = {

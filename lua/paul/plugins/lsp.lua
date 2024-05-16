@@ -12,6 +12,18 @@ return {
       function(server_name)
         require('lspconfig')[server_name].setup({})
       end,
+      ['lua_ls'] = function()
+        require('lspconfig').lua_ls.setup({
+          on_init = function(client)
+            client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+              hint = {
+                enable = true,
+                setType = true,
+              },
+            })
+          end,
+        })
+      end,
     })
 
     local icons = require('paul.icons')
@@ -19,6 +31,7 @@ return {
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, { desc = 'Goto References ' .. icons.LSP })
     vim.keymap.set('n', 'gs', vim.lsp.buf.document_symbol, { desc = 'Goto Document Symbols ' .. icons.LSP })
     vim.keymap.set('n', 'gh', function()
+      ---@diagnostic disable-next-line: missing-parameter
       vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
     end, { desc = 'Toggle Inlay Hints ' .. icons.LSP })
   end,
