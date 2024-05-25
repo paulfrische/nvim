@@ -1,6 +1,5 @@
 local icons = require('paul.icons')
 
-vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, { desc = 'perform code actions ' .. icons.LSP })
 vim.keymap.set('n', '<leader>p', '<cmd>Lazy<cr>', { desc = 'Open Lazy UI ' .. icons.PLUGIN })
 
 -- jumping

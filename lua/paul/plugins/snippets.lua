@@ -12,12 +12,19 @@ return {
     --- Lua ---
     ls.add_snippets('lua', {
       s('req', fmt('require(\'{}\')', { i(0) })),
+      s('func', fmt('function {}()\nend', { i(0) })),
+      s('M', fmt('local M = {{}}\n\n{}\n\nreturn M', { i(0) })),
     })
 
     --- C ---
     ls.add_snippets('c', {
       s('main', fmt('int main(void) {{\n\t{}\n\treturn 0;\n}}', { i(0) })),
       s('st', fmt('typedef struct {{\n}} {};', { i(0) })),
+    })
+
+    --- Python ---
+    ls.add_snippets('python', {
+      s('main', fmt('def main() -> None:\n\t{}\n\nif __name__ == \'__main__\':\n\tmain()', { i(0) })),
     })
   end,
 }
