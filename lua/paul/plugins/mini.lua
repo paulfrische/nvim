@@ -22,6 +22,6 @@ return {
       },
     })
 
-    require('mini.statusline').setup()
+    -- require('mini.statusline').setup()
   end,
 }
