@@ -38,8 +38,6 @@ vim.opt.updatetime = 50
 
 vim.opt.signcolumn = 'yes'
 
--- vim.opt.guicursor = 'n-r:block,i:hor100'
-
 vim.opt.virtualedit = 'block'
 
 vim.opt.termguicolors = true
@@ -52,7 +50,9 @@ vim.opt.splitkeep = 'screen'
 
 vim.opt.showmode = false
 
-vim.opt.cursorline = true
+-- vim.opt.cursorline = true
+-- vim.opt.guicursor = 'n-r:block,i:hor100'
+vim.opt.guicursor = 'i:block'
 
 -- vim.opt.spelllang = 'en_us,de_20'
 -- vim.opt.spell = true
