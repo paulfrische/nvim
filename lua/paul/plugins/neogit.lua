@@ -3,6 +3,7 @@ return {
   dependencies = {
     'sindrets/diffview.nvim',
   },
+  event = 'VeryLazy',
   config = function()
     local icons = require('paul.icons')
 

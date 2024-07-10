@@ -2,6 +2,7 @@ local icons = require('paul.icons')
 
 return {
   'paulfrische/mpd.nvim',
+  event = 'VeryLazy',
   config = function()
     local mpd = require('mpd')
     mpd.setup({})

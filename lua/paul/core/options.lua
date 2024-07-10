@@ -65,11 +65,3 @@ vim.keymap.set('n', 'i', function()
   end
   return 'i'
 end, { expr = true })
-
-if vim.g.neovide then
-  vim.o.guifont = 'CaskaydiaMono Nerd Font:h12:b'
-  vim.g.neovide_floating_shadow = true
-  vim.g.neovide_floating_z_height = 10
-  vim.g.neovide_light_angle_degrees = 45
-  vim.g.neovide_light_radius = 5
-end
