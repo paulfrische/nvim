@@ -3,8 +3,8 @@ local icons = require('paul.icons')
 return {
   'nvim-telescope/telescope.nvim',
   dependencies = {
-    {
       'nvim-lua/plenary.nvim',
+    {
       'nvim-telescope/telescope-fzf-native.nvim',
       build = 'make',
     },
@@ -15,9 +15,6 @@ return {
 
     telescope.setup({
       extensions = {
-        ['fzf'] = {
-          override_generic_sorter = true,
-        },
         ['ui-select'] = {},
       },
     })

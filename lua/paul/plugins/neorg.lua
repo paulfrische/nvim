@@ -2,7 +2,7 @@ local icons = require('paul.icons')
 
 return {
   'nvim-neorg/neorg',
-  dependencies = { 'luarocks.nvim', 'nvim-neorg/neorg-telescope' },
+  dependencies = { 'nvim-neorg/neorg-telescope' },
   version = '*',
   -- lazy = false,
   keys = {
