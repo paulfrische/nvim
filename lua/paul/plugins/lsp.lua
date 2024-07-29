@@ -6,23 +6,35 @@ return {
   },
 
   config = function()
-    require('mason-lspconfig').setup_handlers({
-      function(server_name)
-        require('lspconfig')[server_name].setup({})
-      end,
-      ['lua_ls'] = function()
-        require('lspconfig').lua_ls.setup({
-          settings = {
-            Lua = {
-              hint = {
-                enable = true,
-                setType = true,
-              },
-            },
+    require('lspconfig')['rust_analyzer'].setup({})
+    require('lspconfig')['lua_ls'].setup({
+      settings = {
+        Lua = {
+          hint = {
+            enable = true,
+            setType = true,
           },
-        })
-      end,
+        },
+      },
     })
+
+    -- require('mason-lspconfig').setup_handlers({
+    --   function(server_name)
+    --     require('lspconfig')[server_name].setup({})
+    --   end,
+    --   ['lua_ls'] = function()
+    --     require('lspconfig').lua_ls.setup({
+    --       settings = {
+    --         Lua = {
+    --           hint = {
+    --             enable = true,
+    --             setType = true,
+    --           },
+    --         },
+    --       },
+    --     })
+    --   end,
+    -- })
 
     local icons = require('paul.icons')
     vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, { desc = 'perform code actions ' .. icons.LSP })

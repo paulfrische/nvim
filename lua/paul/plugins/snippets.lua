@@ -26,5 +26,10 @@ return {
     ls.add_snippets('python', {
       s('main', fmt('def main() -> None:\n\t{}\n\nif __name__ == \'__main__\':\n\tmain()', { i(0) })),
     })
+
+    --- Rust ---
+    ls.add_snippets('rust', {
+      s('region', fmt('// region:    --- {a}\n// endregion: --- {a}', { a = i(1) }, { repeat_duplicates = true })),
+    })
   end,
 }
