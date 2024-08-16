@@ -7,6 +7,7 @@ return {
 
   config = function()
     require('lspconfig')['rust_analyzer'].setup({})
+    require('lspconfig')['emmet_language_server'].setup({})
     require('lspconfig')['lua_ls'].setup({
       settings = {
         Lua = {

@@ -1,3 +1,3 @@
 require('paul')
 
-vim.cmd.colorscheme('groov')
+vim.cmd.colorscheme('catppuccin-mocha')
