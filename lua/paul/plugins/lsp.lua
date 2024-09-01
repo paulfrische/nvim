@@ -1,14 +1,15 @@
 return {
   'neovim/nvim-lspconfig',
-  dependencies = {
-    { 'williamboman/mason.nvim', config = true },
-    { 'williamboman/mason-lspconfig.nvim', config = true },
-  },
 
   config = function()
-    require('lspconfig')['rust_analyzer'].setup({})
-    require('lspconfig')['emmet_language_server'].setup({})
-    require('lspconfig')['lua_ls'].setup({
+    local lsp = require('lspconfig')
+
+    lsp['rust_analyzer'].setup({})
+    lsp['emmet_language_server'].setup({})
+    lsp['clangd'].setup({})
+    lsp['zls'].setup({})
+
+    lsp['lua_ls'].setup({
       settings = {
         Lua = {
           hint = {
@@ -18,24 +19,6 @@ return {
         },
       },
     })
-
-    -- require('mason-lspconfig').setup_handlers({
-    --   function(server_name)
-    --     require('lspconfig')[server_name].setup({})
-    --   end,
-    --   ['lua_ls'] = function()
-    --     require('lspconfig').lua_ls.setup({
-    --       settings = {
-    --         Lua = {
-    --           hint = {
-    --             enable = true,
-    --             setType = true,
-    --           },
-    --         },
-    --       },
-    --     })
-    --   end,
-    -- })
 
     local icons = require('paul.icons')
     vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, { desc = 'perform code actions ' .. icons.LSP })

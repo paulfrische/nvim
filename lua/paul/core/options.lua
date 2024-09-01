@@ -35,6 +35,7 @@ vim.opt.undodir = vim.fn.stdpath('data') .. '/undofiles'
 
 vim.opt.swapfile = false
 vim.opt.updatetime = 50
+vim.opt.timeoutlen = 250
 
 vim.opt.signcolumn = 'yes'
 
