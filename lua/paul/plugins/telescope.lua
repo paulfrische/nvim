@@ -3,7 +3,7 @@ local icons = require('paul.icons')
 return {
   'nvim-telescope/telescope.nvim',
   dependencies = {
-      'nvim-lua/plenary.nvim',
+    'nvim-lua/plenary.nvim',
     {
       'nvim-telescope/telescope-fzf-native.nvim',
       build = 'make',
@@ -14,8 +14,18 @@ return {
     local telescope = require('telescope')
 
     telescope.setup({
+      defaults = {
+        file_ignore_patterns = {
+          '.git',
+        },
+      },
       extensions = {
         ['ui-select'] = {},
+      },
+      pickers = {
+        find_files = {
+          hidden = true,
+        },
       },
     })
 
