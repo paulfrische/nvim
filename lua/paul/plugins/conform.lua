@@ -11,6 +11,7 @@ return {
         python = { 'black' },
         rust = { 'rustfmt' },
         tex = { 'bibtex-tidy' },
+        nix = { 'alejandra' },
       },
 
       format_on_save = function(bufnr)

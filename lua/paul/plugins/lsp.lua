@@ -1,15 +1,20 @@
 return {
   'neovim/nvim-lspconfig',
+  dependencies = { 'saghen/blink.cmp' },
 
   config = function()
-    local lsp = require('lspconfig')
+    local setup_server = function(name, config)
+      local lsp = require('lspconfig')
+      config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+      lsp[name].setup(config)
+    end
 
-    lsp['rust_analyzer'].setup({})
-    lsp['emmet_language_server'].setup({})
-    lsp['clangd'].setup({})
-    lsp['zls'].setup({})
+    setup_server('rust_analyzer', {})
+    setup_server('emmet_language_server', {})
+    setup_server('clangd', {})
+    setup_server('nixd', {})
 
-    lsp['lua_ls'].setup({
+    setup_server('lua_ls', {
       settings = {
         Lua = {
           hint = {

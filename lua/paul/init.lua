@@ -16,4 +16,16 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 ---@diagnostic disable-next-line: param-type-mismatch
-require('lazy').setup('paul.plugins')
+require('lazy').setup({
+  spec = {
+    { import = 'paul.plugins' },
+  },
+
+  git = {
+    timeout = 5 * 60,
+  },
+
+  checker = { enabled = true },
+
+  install = { colorscheme = { 'default' } },
+})
