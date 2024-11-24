@@ -13,11 +13,6 @@ return {
   opts = {
     load = {
       ['core.defaults'] = {}, -- Loads default behaviour
-      ['core.completion'] = {
-        config = {
-          engine = 'nvim-cmp',
-        },
-      }, -- Loads default behaviour
       ['core.keybinds'] = {
         config = {
           default_keybinds = true,

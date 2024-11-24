@@ -53,7 +53,7 @@ vim.opt.showmode = false
 
 -- vim.opt.cursorline = true
 -- vim.opt.guicursor = 'n-r:block,i:hor100'
-vim.opt.guicursor = 'i:block'
+-- vim.opt.guicursor = 'i:block'
 
 -- vim.opt.spelllang = 'en_us,de_20'
 -- vim.opt.spell = true
