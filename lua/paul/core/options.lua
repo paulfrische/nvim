@@ -51,7 +51,12 @@ vim.opt.splitkeep = 'screen'
 
 vim.opt.showmode = false
 
--- vim.opt.cursorline = true
+vim.opt.wrap = true
+vim.opt.linebreak = true
+
+vim.opt.more = false
+
+vim.opt.cursorline = true
 -- vim.opt.guicursor = 'n-r:block,i:hor100'
 -- vim.opt.guicursor = 'i:block'
 

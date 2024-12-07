@@ -2,6 +2,8 @@ return {
   'neovim/nvim-lspconfig',
   dependencies = { 'saghen/blink.cmp' },
 
+  event = 'BufEnter',
+
   config = function()
     local setup_server = function(name, config)
       local lsp = require('lspconfig')

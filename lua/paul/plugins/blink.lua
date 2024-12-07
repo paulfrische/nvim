@@ -18,7 +18,6 @@ return {
     windows = {
       autocomplete = {
         selection = 'preselect',
-        border = 'solid',
       },
       ghost_text = {
         enabled = true,
