@@ -15,10 +15,15 @@ return {
       use_nvim_cmp_as_default = true,
     },
 
-    windows = {
-      autocomplete = {
-        selection = 'preselect',
+    completion = {
+      list = {
+        selection = 'auto_insert',
       },
+
+      documentation = {
+        auto_show = true,
+      },
+
       ghost_text = {
         enabled = true,
       },

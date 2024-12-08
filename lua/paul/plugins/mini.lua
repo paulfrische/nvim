@@ -9,9 +9,9 @@ return {
 
     require('mini.splitjoin').setup()
 
-    require('mini.pairs').setup({
-      modes = { command = true },
-    })
+    -- require('mini.pairs').setup({
+    --   modes = { command = true },
+    -- })
 
     require('mini.move').setup({
       mappings = {
