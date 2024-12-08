@@ -4,9 +4,7 @@ return {
   event = { 'VeryLazy', 'InsertEnter' },
   config = function()
     require('mini.surround').setup()
-
     require('mini.align').setup()
-
     require('mini.splitjoin').setup()
 
     -- require('mini.pairs').setup({
@@ -21,7 +19,5 @@ return {
         up = 'K',
       },
     })
-
-    -- require('mini.statusline').setup()
   end,
 }
