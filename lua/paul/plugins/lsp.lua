@@ -2,28 +2,32 @@ return {
   'neovim/nvim-lspconfig',
   dependencies = { 'saghen/blink.cmp' },
 
-  config = function()
-    local setup_server = function(name, config)
-      local lsp = require('lspconfig')
-      config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-      lsp[name].setup(config)
-    end
+  opts = {
+    servers = {
+      ['rust_analyzer'] = {},
+      ['emmet_language_server'] = {},
+      ['clangd'] = {},
+      ['nixd'] = {},
 
-    setup_server('rust_analyzer', {})
-    setup_server('emmet_language_server', {})
-    setup_server('clangd', {})
-    setup_server('nixd', {})
-
-    setup_server('lua_ls', {
-      settings = {
-        Lua = {
-          hint = {
-            enable = true,
-            setType = true,
+      ['lua_ls'] = {
+        settings = {
+          Lua = {
+            hint = {
+              enable = true,
+              setType = true,
+            },
           },
         },
       },
-    })
+    },
+  },
+
+  config = function(_, opts)
+    local lspconfig = require('lspconfig')
+    for server, config in pairs(opts.servers) do
+      config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+      lspconfig[server].setup(config)
+    end
 
     local icons = require('paul.icons')
     vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, { desc = 'perform code actions ' .. icons.LSP })
