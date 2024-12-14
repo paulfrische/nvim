@@ -8,6 +8,7 @@ return {
       ['emmet_language_server'] = {},
       ['clangd'] = {},
       ['nixd'] = {},
+      ['ols'] = {},
 
       ['lua_ls'] = {
         settings = {
