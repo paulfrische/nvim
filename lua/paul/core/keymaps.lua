@@ -14,7 +14,6 @@ vim.keymap.set('n', 'H', '_', { desc = 'jump through (logical) start of line ' .
 vim.keymap.set('n', 'L', '$', { desc = 'jump through (logical) end of line ' .. icons.UTIL })
 
 vim.keymap.set('n', '<Esc>', '<cmd>noh<cr>', { desc = 'clear search highlights' .. icons.UTIL })
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'exit terminal ' .. icons.TERMINAL })
 
 vim.keymap.set('n', '<leader>+', '<C-a>', { desc = 'Increment number ' .. icons.UTIL })
 vim.keymap.set('n', '<leader>-', '<C-x>', { desc = 'Decrement number ' .. icons.UTIL })
@@ -27,3 +26,5 @@ vim.keymap.set('i', '.', '.<c-g>u')
 
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
+
+vim.keymap.set('n', '<leader>st', require('paul.core.term').open)
