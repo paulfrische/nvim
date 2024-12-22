@@ -7,6 +7,9 @@ return {
     require('mini.align').setup()
     require('mini.splitjoin').setup()
 
+    require('mini.icons').setup()
+    MiniIcons.mock_nvim_web_devicons()
+
     -- require('mini.pairs').setup({
     --   modes = { command = true },
     -- })

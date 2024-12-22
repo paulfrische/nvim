@@ -18,6 +18,7 @@ return {
 
     telescope.setup({
       defaults = {
+        border = false,
         file_ignore_patterns = {
           '.git',
         },

@@ -1,7 +1,11 @@
 return {
   'saghen/blink.cmp',
   lazy = false, -- lazy loading handled internally
-  version = 'v0.*',
+  version = '*',
+
+  dependencies = {
+    'rafamadriz/friendly-snippets',
+  },
 
   opts = {
     keymap = {
@@ -11,9 +15,9 @@ return {
       ['<CR>'] = { 'accept', 'fallback' },
     },
 
-    highlight = {
-      use_nvim_cmp_as_default = true,
-    },
+    -- highlight = {
+    --   use_nvim_cmp_as_default = true,
+    -- },
 
     completion = {
       list = {
@@ -24,8 +28,5 @@ return {
         auto_show = true,
       },
     },
-
-    -- experimental signature help support
-    trigger = { signature_help = { enabled = true } },
   },
 }
