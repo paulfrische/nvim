@@ -15,10 +15,6 @@ return {
       ['<CR>'] = { 'accept', 'fallback' },
     },
 
-    -- highlight = {
-    --   use_nvim_cmp_as_default = true,
-    -- },
-
     completion = {
       list = {
         selection = 'auto_insert',

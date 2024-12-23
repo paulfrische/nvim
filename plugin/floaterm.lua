@@ -32,6 +32,7 @@ local function create_term()
   vim.cmd.term()
 
   vim.keymap.set('n', '<esc>', '<cmd>Floaterm<cr>', { buffer = state.buffer })
+  vim.keymap.set('t', '<esc>', '<c-\\><c-n>', { buffer = state.buffer })
 end
 
 local function toggle()
