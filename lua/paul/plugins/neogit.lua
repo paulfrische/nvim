@@ -3,7 +3,11 @@ return {
   dependencies = {
     'sindrets/diffview.nvim',
   },
-  event = 'VeryLazy',
+
+  keys = {
+    '<leader>gg',
+  },
+
   config = function()
     local icons = require('paul.icons')
 

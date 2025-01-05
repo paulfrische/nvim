@@ -12,6 +12,7 @@ return {
         rust = { 'rustfmt' },
         tex = { 'bibtex-tidy' },
         nix = { 'alejandra' },
+        cpp = { 'clang-format' },
       },
 
       format_on_save = function(bufnr)

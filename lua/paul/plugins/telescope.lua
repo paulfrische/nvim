@@ -11,7 +11,13 @@ return {
     'nvim-telescope/telescope-ui-select.nvim',
   },
 
-  event = 'VeryLazy',
+  keys = {
+    '<leader>fd',
+    '<leader>fm',
+    '<leader>fs',
+    '<leader>fh',
+    '<leader>f,',
+  },
 
   config = function()
     local telescope = require('telescope')
@@ -20,7 +26,7 @@ return {
       defaults = {
         border = false,
         file_ignore_patterns = {
-          '.git',
+          '^%.git/',
         },
       },
       extensions = {
