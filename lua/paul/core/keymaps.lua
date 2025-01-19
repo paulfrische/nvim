@@ -20,8 +20,6 @@ vim.keymap.set('n', '<leader>-', '<C-x>', { desc = 'Decrement number ' .. icons.
 
 vim.keymap.set('n', '<leader>n', '<cmd>cnext<cr>', { desc = 'Jump to next item in quickfix list' .. icons.UTIL })
 
-vim.keymap.set('n', '<leader>x', '<cmd>so %<cr>')
-
 vim.keymap.set('i', ';', ';<c-g>u')
 vim.keymap.set('i', ',', ',<c-g>u')
 vim.keymap.set('i', '.', '.<c-g>u')

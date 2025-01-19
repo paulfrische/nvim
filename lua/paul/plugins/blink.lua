@@ -17,12 +17,15 @@ return {
 
     completion = {
       list = {
-        selection = 'auto_insert',
+        selection = {
+          preselect = false,
+          auto_insert = true,
+        },
       },
 
-      menu = {
-        border = 'rounded',
-      },
+      -- menu = {
+      --   border = 'rounded',
+      -- },
 
       documentation = {
         auto_show = true,

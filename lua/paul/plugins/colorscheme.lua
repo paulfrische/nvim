@@ -13,6 +13,10 @@ return {
   },
 
   {
+    'olimorris/onedarkpro.nvim',
+  },
+
+  {
     'folke/tokyonight.nvim',
     opts = {
       style = 'night',
