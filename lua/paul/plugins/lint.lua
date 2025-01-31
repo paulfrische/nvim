@@ -4,7 +4,7 @@ return {
     require('lint').linters_by_ft = {
       cpp = {
         'cppcheck',
-        -- 'clangtidy'
+        'clangtidy',
       },
     }
 
