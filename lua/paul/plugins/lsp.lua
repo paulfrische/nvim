@@ -9,6 +9,7 @@ return {
       ['clangd'] = {},
       ['nixd'] = {},
       ['ols'] = {},
+      ['zls'] = {},
 
       ['lua_ls'] = {
         settings = {

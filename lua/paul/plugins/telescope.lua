@@ -8,7 +8,6 @@ return {
       'nvim-telescope/telescope-fzf-native.nvim',
       build = 'make',
     },
-    'nvim-telescope/telescope-ui-select.nvim',
   },
 
   keys = {
@@ -30,7 +29,6 @@ return {
         },
       },
       extensions = {
-        ['ui-select'] = {},
         ['fzf'] = {},
       },
       pickers = {
@@ -45,8 +43,6 @@ return {
     if not ok then
       print(err)
     end
-
-    telescope.load_extension('ui-select')
 
     local builtin = require('telescope.builtin')
     vim.keymap.set('n', '<leader>fd', builtin.find_files, { desc = 'Fuzzy Find Files ' .. icons.FILES })
