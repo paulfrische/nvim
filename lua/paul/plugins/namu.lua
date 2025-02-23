@@ -9,5 +9,7 @@ return {
     })
 
     vim.keymap.set('n', '<leader>ns', '<cmd>Namu symbols<cr>')
+
+    vim.keymap.set('n', '<leader>f,', '<cmd>Nerdy<cr>')
   end,
 }

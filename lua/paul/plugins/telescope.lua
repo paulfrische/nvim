@@ -46,10 +46,9 @@ return {
 
     local builtin = require('telescope.builtin')
     vim.keymap.set('n', '<leader>fd', builtin.find_files, { desc = 'Fuzzy Find Files ' .. icons.FILES })
-    vim.keymap.set('n', '<leader>fm', builtin.man_pages, { desc = 'Fuzzy Find Files ' .. icons.FILES })
+    vim.keymap.set('n', '<leader>fm', builtin.man_pages, { desc = 'Fuzzy Find Man Pages ' .. icons.FILES })
     vim.keymap.set('n', '<leader>fs', builtin.live_grep, { desc = 'Grep String ' .. icons.FILES })
-    vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Grep String ' .. icons.FILES })
-    vim.keymap.set('n', '<leader>f,', '<cmd>Nerdy<cr>')
+    vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Fuzzy Find Help Pages' .. icons.FILES })
 
     vim.keymap.set('n', '<leader>en', function()
       builtin.find_files({ cwd = vim.fn.stdpath('config') })

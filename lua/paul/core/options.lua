@@ -69,6 +69,7 @@ vim.keymap.set('n', 'i', function()
 end, { expr = true })
 
 vim.diagnostic.config({
+  virtual_lines = true,
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = '',
