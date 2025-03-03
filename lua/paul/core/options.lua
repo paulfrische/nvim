@@ -56,12 +56,10 @@ vim.opt.wrap = false
 
 vim.opt.more = false
 
--- vim.opt.guicursor = 'n-r:block,i:hor100'
--- vim.opt.guicursor = 'i:block'
+vim.opt.guicursor = 'a:block'
 
 -- autoindent
 vim.keymap.set('n', 'i', function()
-  ---@diagnostic disable-next-line: param-type-mismatch
   if #vim.fn.getline('.') == 0 then
     return '"_cc'
   end
@@ -69,7 +67,7 @@ vim.keymap.set('n', 'i', function()
 end, { expr = true })
 
 vim.diagnostic.config({
-  virtual_lines = true,
+  virtual_text = true,
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = '',
