@@ -13,6 +13,7 @@ return {
       ['<C-n>'] = { 'show', 'select_next' },
       ['<C-p>'] = { 'select_prev' },
       ['<CR>'] = { 'accept', 'fallback' },
+      ['<C-k>'] = {},
     },
 
     completion = {

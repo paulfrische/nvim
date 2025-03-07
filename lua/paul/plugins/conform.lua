@@ -13,6 +13,7 @@ return {
         tex = { 'bibtex-tidy' },
         nix = { 'alejandra' },
         cpp = { 'clang-format' },
+        cmake = { 'cmake_format' },
       },
 
       format_on_save = function(bufnr)
