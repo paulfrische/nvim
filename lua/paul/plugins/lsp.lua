@@ -4,8 +4,30 @@ return {
 
   opts = {
     servers = {
-      ['rust_analyzer'] = {},
-      ['emmet_language_server'] = {},
+      ['rust_analyzer'] = {
+        settings = {
+          ['rust-analyzer'] = {
+            check = {
+              command = 'clippy',
+            },
+          },
+        },
+      },
+      ['emmet_language_server'] = {
+        filetypes = {
+          'css',
+          'eruby',
+          'html',
+          'javascript',
+          'javascriptreact',
+          'less',
+          'sass',
+          'scss',
+          'pug',
+          'typescriptreact',
+          'htmldjango',
+        },
+      },
       ['clangd'] = {},
       ['nixd'] = {},
       ['ols'] = {},
