@@ -15,11 +15,6 @@ vim.keymap.set('n', 'L', '$', { desc = 'jump through (logical) end of line ' .. 
 
 vim.keymap.set('n', '<Esc>', '<cmd>noh<cr>', { desc = 'clear search highlights' .. icons.UTIL })
 
-vim.keymap.set('n', '<leader>+', '<C-a>', { desc = 'Increment number ' .. icons.UTIL })
-vim.keymap.set('n', '<leader>-', '<C-x>', { desc = 'Decrement number ' .. icons.UTIL })
-
-vim.keymap.set('n', '<leader>n', '<cmd>cnext<cr>', { desc = 'Jump to next item in quickfix list' .. icons.UTIL })
-
 vim.keymap.set('i', ';', ';<c-g>u')
 vim.keymap.set('i', ',', ',<c-g>u')
 vim.keymap.set('i', '.', '.<c-g>u')
