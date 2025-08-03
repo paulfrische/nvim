@@ -1,57 +1,16 @@
 return {
   'neovim/nvim-lspconfig',
-  dependencies = { 'saghen/blink.cmp' },
 
-  opts = {
-    servers = {
-      ['rust_analyzer'] = {
-        settings = {
-          ['rust-analyzer'] = {
-            check = {
-              command = 'clippy',
-            },
-          },
-        },
-      },
-      ['emmet_language_server'] = {
-        filetypes = {
-          'css',
-          'eruby',
-          'html',
-          'javascript',
-          'javascriptreact',
-          'less',
-          'sass',
-          'scss',
-          'pug',
-          'typescriptreact',
-          'htmldjango',
-        },
-      },
-      ['clangd'] = {},
-      ['nixd'] = {},
-      ['ols'] = {},
-      ['zls'] = {},
-
-      ['lua_ls'] = {
-        settings = {
-          Lua = {
-            hint = {
-              enable = true,
-              setType = true,
-            },
-          },
-        },
-      },
-    },
-  },
-
-  config = function(_, opts)
-    local lspconfig = require('lspconfig')
-    for server, config in pairs(opts.servers) do
-      config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-      lspconfig[server].setup(config)
-    end
+  config = function()
+    vim.lsp.enable({
+      'rust_analyzer',
+      'emmet_language_server',
+      'clangd',
+      'nixd',
+      'ols',
+      'zls',
+      'lua_ls',
+    })
 
     local icons = require('paul.icons')
     vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, { desc = 'perform code actions ' .. icons.LSP })
