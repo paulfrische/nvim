@@ -9,12 +9,11 @@ return {
     ts.install({ 'lua', 'c', 'vim', 'vimdoc', 'query' })
 
     vim.api.nvim_create_autocmd('FileType', {
-      pattern = { '<filetype>' },
+      pattern = ts.get_installed(),
       callback = function()
-        ts.install()
         vim.treesitter.start()
 
-        vim.bo.indentexpr = 'v:lua.require\'nvim-treesitter\'.indentexpr()' -- ts indenting. may suck
+        -- vim.bo.indentexpr = 'v:lua.require\'nvim-treesitter\'.indentexpr()' -- ts indenting. may suck
       end,
     })
   end,
