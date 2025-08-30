@@ -1,55 +1,21 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  dependencies = {
-    { 'nvim-treesitter/nvim-treesitter-textobjects' },
-    { 'nvim-treesitter/nvim-treesitter-context' },
-    { 'windwp/nvim-ts-autotag' },
-  },
-  event = { 'BufNew', 'BufReadPre', 'InsertEnter' },
+  lazy = false,
+  branch = 'main',
   build = ':TSUpdate',
+
   config = function()
-    ---@diagnostic disable-next-line: missing-fields
-    require('nvim-treesitter.configs').setup({
-      ensure_installed = { 'lua', 'c', 'vim', 'vimdoc', 'query' },
-      auto_install = true,
+    local ts = require('nvim-treesitter')
+    ts.install({ 'lua', 'c', 'vim', 'vimdoc', 'query' })
 
-      highlight = { enable = true },
-      indent = { enable = true },
-      autotag = { enable = true },
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = { '<filetype>' },
+      callback = function()
+        ts.install()
+        vim.treesitter.start()
 
-      textobjects = {
-        select = {
-          enable = true,
-          keymaps = {
-            ['af'] = {
-              query = '@function.outer',
-              desc = 'select function [outer]',
-            },
-            ['if'] = {
-              query = '@function.inner',
-              desc = 'select function [inner]',
-            },
-            ['ac'] = {
-              query = '@class.outer',
-              desc = 'select class [outer]',
-            },
-            ['ic'] = {
-              query = '@class.inner',
-              desc = 'select class [inner]',
-            },
-            ['il'] = {
-              query = '@loop.inner',
-              desc = 'select loop [inner]',
-            },
-            ['al'] = {
-              query = '@loop.outer',
-              desc = 'select loop [outer]',
-            },
-          },
-        },
-      },
+        vim.bo.indentexpr = 'v:lua.require\'nvim-treesitter\'.indentexpr()' -- ts indenting. may suck
+      end,
     })
-
-    require('treesitter-context').setup({})
   end,
 }
